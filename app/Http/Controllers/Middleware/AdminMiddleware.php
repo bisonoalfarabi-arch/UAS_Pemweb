@@ -18,7 +18,6 @@ class AdminMiddleware
 
         // Bukan admin
         if (Auth::user()->role !== 'admin') {
-            // Pakai URL langsung biar aman walau route name "home" tidak ada
             return redirect('/')
                 ->with('error', 'Akses ditolak. Hanya administrator yang dapat mengakses halaman ini.');
         }
