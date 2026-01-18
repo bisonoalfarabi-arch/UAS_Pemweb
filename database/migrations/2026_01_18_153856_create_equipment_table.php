@@ -17,9 +17,7 @@ return new class extends Migration {
             $table->string('name');
             $table->text('description')->nullable();
 
-            // kalau gambar kamu disimpan di public/images, biasanya cukup simpan nama file / path
-            $table->string('image')->nullable(); // contoh: canon-r5.jpg atau images/canon-r5.jpg
-
+            $table->string('image')->nullable(); 
             $table->unsignedInteger('stock')->default(0);
             $table->decimal('price_per_day', 12, 2)->default(0);
 

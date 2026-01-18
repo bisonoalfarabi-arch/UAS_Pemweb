@@ -22,7 +22,6 @@ return new class extends Migration {
 
             $table->unsignedInteger('qty')->default(1);
 
-            // snapshot harga saat transaksi (biar kalau harga barang berubah, transaksi lama tetap aman)
             $table->decimal('price_per_day', 12, 2)->default(0);
             $table->decimal('subtotal', 12, 2)->default(0);
 

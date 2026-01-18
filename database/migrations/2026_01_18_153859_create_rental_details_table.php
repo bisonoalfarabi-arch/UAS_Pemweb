@@ -22,7 +22,6 @@ return new class extends Migration {
             $table->string('phone')->nullable();
             $table->text('notes')->nullable();
 
-            // kalau nanti butuh denda / deposit:
             $table->decimal('deposit', 12, 2)->default(0);
             $table->decimal('penalty', 12, 2)->default(0);
 
